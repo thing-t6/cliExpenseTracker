@@ -10,6 +10,7 @@ public class Expenses {
         this.expenseAmount = expenseAmount;
     }
 
+    // getters
     String getName(){
         return expenseName;
     }

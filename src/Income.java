@@ -27,6 +27,7 @@ public class Income{
         return this.finalAmount;
     }
 
+    // getters
     double getInitialIncome(){
         return this.initialIncome;
     }

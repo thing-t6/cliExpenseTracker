@@ -10,6 +10,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int numberOfExpense = 0;
         double totalExpense = 0;
+
+        // date object
         LocalDate date = LocalDate.now();
         DecimalFormat df = new DecimalFormat("0.00");
 
@@ -78,6 +80,7 @@ public class Main {
 
         String filePath = "src/test.txt";
 
+        //Getting use input for filewriting
         while(true) {
             System.out.print("Do you want to add these expenses to a file? (Y/N): ");
             String decisionWriteFile = scanner.nextLine().toUpperCase();
@@ -97,6 +100,7 @@ public class Main {
             }
         }
 
+        // getting user input for readingfile
         while (true) {
             System.out.print("Do you want to see the content of the file? (Y/N): ");
             String decisionShowFileContent = scanner.nextLine().toUpperCase();
@@ -119,6 +123,7 @@ public class Main {
 
     }
 
+    //function to write file
     public static void writeFile(ArrayList<Expenses> expenseList,double totalExpense, double finalAmount, double income,String filePath,LocalDate date){
             try(FileWriter writer = new FileWriter(filePath, true)) {
                 writer.write("--------Date : " + date + "--------\n");
@@ -140,6 +145,7 @@ public class Main {
 
         }
 
+    // function to read and print files
     public static void showFile(String filePath){
         try(BufferedReader reader = new BufferedReader(new FileReader(filePath))){
             String line;
