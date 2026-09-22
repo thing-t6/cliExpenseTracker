@@ -7,8 +7,3 @@ A terminal-based expense manager built in Java. It tracks income and expenses al
 - Tracks income vs. expenses with exact dates using `LocalDate`
 - Custom Java object model (`Expenses`, `Income`)
 - Local file persistence using `FileWriter` and `BufferedReader`
-
-## How to Run
-```bash
-javac src/*.java
-java -cp src Main
